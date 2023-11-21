@@ -21,11 +21,13 @@ import br.com.projetotrt.services.AlunoService;
 @RestController
 @RequestMapping("/aluno")
 public class AlunoController {
+
+
 	
 	@Autowired
 	private AlunoService service;
 	
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE) //swagger futuramente da problema se tirar o produces
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE) //swagger futuramente dá problema se tirar o produces
 	public List<Aluno> findAll(){
 		return service.findAll();
 	}
